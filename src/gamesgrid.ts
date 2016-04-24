@@ -7,7 +7,7 @@ import { catalog } from "catalog";
 interface GameCell {
 	tile: HTMLElement;
 	thumb: HTMLImageElement;
-	title: HTMLElement;
+	title: HTMLLinkElement;
 	author: HTMLElement;
 	pills: HTMLElement;
 
@@ -86,7 +86,7 @@ export class GamesGrid {
 		var cell: GameCell = {
 			tile: <HTMLElement>tile,
 			thumb: <HTMLImageElement>tile.querySelector("img"),
-			title: <HTMLElement>tile.querySelector("h2"),
+			title: <HTMLLinkElement>tile.querySelector("h2 a"),
 			author: <HTMLElement>tile.querySelector("p.author span"),
 			pills: <HTMLElement>tile.querySelector(".pills"),
 			position: -1,
@@ -140,7 +140,7 @@ export class GamesGrid {
 
 	private setCellPosition(cell: GameCell, newPosition: number) {
 		cell.position = newPosition;
-		
+
 		if (newPosition >= this.entryCount_) {
 			cell.tile.style.display = "none";
 			cell.hidden = true;
@@ -163,6 +163,7 @@ export class GamesGrid {
 			cell.tile.dataset["eix"] = "" + contentIndex;
 			cell.thumb.src = entry.thumbnail_url;
 			cell.title.textContent = entry.title;
+			cell.title.href = entry.entry_url;
 			cell.author.textContent = entry.author.name;
 			cell.pills.innerHTML = "";
 
