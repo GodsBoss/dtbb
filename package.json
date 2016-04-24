@@ -1,0 +1,22 @@
+{
+  "name": "ld35-altbrowser",
+  "version": "1.0.0",
+  "description": "Faster and better browsing of Ludum Dare 35 entries.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenmumbler/dtbb.git"
+  },
+  "scripts": {
+    "build": "npm install && ./node_modules/.bin/tsc -p src/tsconfig.json"
+  },
+  "author": "Arthur Langereis",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/zenmumbler/dtbb/issues"
+  },
+  "homepage": "https://github.com/zenmumbler/dtbb#readme",
+  "dependencies": {
+    "typescript": "^1.8.10"
+  }
+}
