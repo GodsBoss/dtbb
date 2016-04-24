@@ -41,3 +41,8 @@ something cool yourself, use the ld35-entries.json file in the data dir and have
 This project was mainly started to address my own frustration with using the aging LD interface.
 
 Now go and play + rate some games.
+
+Development
+-----------
+
+To build, you must have npm installed. Then, simply run `npm run-script build`.
